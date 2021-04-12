@@ -52,7 +52,7 @@ const unsigned int TX_INTERVAL = 120;
 
 const unsigned int GPS_FIX_RETRY_DELAY = 10; // wait this many seconds when no GPS fix is received to retry
 const unsigned int SHORT_TX_INTERVAL = 20; // when driving, send packets every SHORT_TX_INTERVAL seconds
-const double MOVING_KMPH = 10.0; // if speed in km/h is higher than MOVING_HMPH, we assume that car is moving
+const double MOVING_KMPH = 0; // if speed in km/h is higher than MOVING_HMPH, we assume that car is moving
 
 // Pin mapping
 const lmic_pinmap lmic_pins = {
@@ -202,9 +202,9 @@ void do_send(osjob_t* j) {
       lpp.addBarometricPressure(4, pressure);
       lpp.addAnalogInput(5, vBat);
       // optional: send current speed, satellite count, altitude from barometric sensor and battery voltage
-      //lpp.addAnalogInput(6, kmph);
+      lpp.addAnalogInput(6, kmph);
       lpp.addAnalogInput(7, sats);
-      //lpp.addAnalogInput(8, alt_barometric);
+      lpp.addAnalogInput(8, alt_barometric);
       
       
       // read LPP packet bytes, write them to FIFO buffer of the LoRa module, queue packet to send to TTN
