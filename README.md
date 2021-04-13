@@ -59,7 +59,8 @@ Optionally you can also connect the `Lora2` output to `GPIO 32`, but this is not
 Connect the BME/BMP280 module's `SDA` line to pin `21` and `SCL` to pin `22` on the TTGO.
 If you want a more reliable data line (if the wires are long for some reason), you can add **pull-up resistors** on SDA and SCL lines.
 Any value from 2.2k to 10k should be OK.
-`VCC` of the module to `3V3` and `GND` to `GND` of course.
+`VCC` of the module to `3V3` and `GND` to `GND` of course
+![TTN Keys](TTGO-T-BEAM_bb.png).
 
 ## 3. Libraries needed
 
@@ -167,7 +168,7 @@ Power
 ### First prototype
 
 ![Prototype Car Tracker 1](images/proto1.jpg)
-![Prototype Car Tracker 2](images/proto2.jpg)
+![Prototype Car Tracker 2](images/proto2.gif)
 
 ## TODO
 
