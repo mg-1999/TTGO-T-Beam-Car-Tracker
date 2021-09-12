@@ -14,18 +14,24 @@ I'll try to describe whole project setup as best I can.
 ## 1. Backend setup
 
 1. If you don't already have it, [set up The Things Network account](https://account.thethingsnetwork.org/register)
-2. Create new Application in TTN [Applications Console](https://console.thethingsnetwork.org/applications)
-3. Add a new device for your new TTN application and select **ABP Activation Method**
-4. Insert **Network Session Key**, **App Session Key** and **Device Address** to file `config.h` in Arduino project
-5. Upload sketch to your board, you can program the T-Beam using the [Arduino ESP32](https://github.com/espressif/arduino-esp32) board `Heltec_WIFI_LoRa_32`
-6. In your TTN application, in section **Payload formats** select `Cayenne LPP`
-7. In **Integrations** section, select `Cayenne`
-8. Fill **Process ID** (choose any name you prefer), select **Default Access Key** and click on **Add integration**
-9. [Log in to myDevices Cayenne](https://cayenne.mydevices.com/), on the top click on `+` and enter project name
-10. Click on **Add new** -> **Device/Widget** -> **LoRa** -> **The Things Network** -> **Cayenne LPP**
-11. Choose your **Name** and fill out **DevEUI** (copy **Device EUI** from [TTN Console](https://console.thethingsnetwork.org/)). Then select **Activation Mode** -> **Already Registered**, **Tracking** -> **This device moves**. Click **Add device**.
-12. If your tracker already sent any data to TTN, you'll see bunch of data fields. You can drag them to your Cayenne project.
-13. Install the **Cayenne** mobile app to your Android/iPhone.
+2. Create new Application in TTN [Applications Console](https://console.cloud.thethings.network/)
+3. Add a new "End device" for your new TTN application and select **ABP Activation Method** and these params:
+4. ![TTN v3 add device](images/TTN-v3_device_register.jpg)
+5. Insert **Network Session Key**, **App Session Key** and **Device Address** to file `config.h` in Arduino project
+6. Set up Arduino IDE with:
+* Board: "T-Beam"
+* Upload Speed: "115200"
+* Flash Frequenc: "80MHz"
+* PSRAM: "Disabled"
+7. Upload sketch to your board, you can program the T-Beam using the [Arduino ESP32](https://github.com/espressif/arduino-esp32) board `Heltec_WIFI_LoRa_32`
+8. In your TTN application, in section **Payload formats** select `Cayenne LPP`
+9. In **Integrations** section, select `Cayenne`
+10. Fill **Process ID** (choose any name you prefer), select **Default Access Key** and click on **Add integration**
+11. [Log in to myDevices Cayenne](https://cayenne.mydevices.com/), on the top click on `+` and enter project name
+12. Click on **Add new** -> **Device/Widget** -> **LoRa** -> **The Things Network** -> **Cayenne LPP**
+13. Choose your **Name** and fill out **DevEUI** (copy **Device EUI** from [TTN Console](https://console.thethingsnetwork.org/)). Then select **Activation Mode** -> **Already Registered**, **Tracking** -> **This device moves**. Click **Add device**.
+14. If your tracker already sent any data to TTN, you'll see bunch of data fields. You can drag them to your Cayenne project.
+15. Install the **Cayenne** mobile app to your Android/iPhone.
 
 #### That's it 😃
 
