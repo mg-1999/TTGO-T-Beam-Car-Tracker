@@ -24,7 +24,7 @@ I'll try to describe whole project setup as best I can.
 * Upload Speed: "115200"
 * Flash Frequenc: "80MHz"
 * PSRAM: "Disabled"
-8. Upload sketch to your board, you can program the T-Beam using the [Arduino ESP32](https://github.com/espressif/arduino-esp32) board `Heltec_WIFI_LoRa_32`
+8. Upload sketch to your board, you can program the T-Beam using the [Arduino ESP32](https://github.com/espressif/arduino-esp32) board `T-Beam`
 9. In your TTN application, in section **Payload formats** select `Cayenne LPP`
 10. In **Integrations** section, select `Cayenne`
 11. Fill **Process ID** (choose any name you prefer), select **Default Access Key** and click on **Add integration**
